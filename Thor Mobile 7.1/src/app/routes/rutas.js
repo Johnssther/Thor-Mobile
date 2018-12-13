@@ -1,0 +1,78 @@
+const path = require('path');
+const express = require("express");
+const router = express.Router();
+
+
+const User = require('../models/Usuario'); //traigo el modelo de la bds
+const bodyParser = require('body-parser');//traer objeto .json
+
+
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '../../../views/01Home.html'))
+});
+
+router.get('/formulario.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '../../../views/formulario.html'))
+});
+
+router.get('/form_login.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '../../../views/form_login.html'))
+});
+
+router.get('/carrito.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '../../../views/carrito.html'))
+});
+
+router.get('/03Planes.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '../../../views/03Planes.html'))
+});
+
+router.get('/Catalogo.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '../../../views/Catalogo.html'))
+});
+
+// router.post('/signup', (req, res) => {
+//     console.log('POST /signup');
+//     console.log(req.body);
+//     console.log('Guardando en la base de datos');
+//     //res.sendFile(path.join(__dirname + '../../../views/profile.html'))
+
+//     let usuario = new User()
+//     usuario.name = req.body.name
+//     usuario.lastname = req.body.lastname
+//     usuario.email = req.body.email
+//     usuario.date = req.body.date
+//     usuario.nickname = req.body.nickname
+//     usuario.password = req.body.password
+
+//     usuario.save(console.log('Datos registrados'))
+
+// });
+
+// //login
+
+// router.post('/login', async (req, res) => {
+//     console.log(req.body);
+//     const resultado = await User.find(
+//         {
+//             nickname: req.body.nickname,
+//             password: req.body.password
+
+//         }
+//     ).countDocuments();
+//     if (resultado > 0) {
+//         console.log('Login correcto')
+//         res.sendFile(path.join(__dirname + '../../../views/01Home.html'))
+        
+
+//     } else {
+//         console.log('login incorrecto')
+//         res.sendFile(path.join(__dirname + '../../../views/form_login.html'))
+
+//     }
+
+// });
+
+
+
+module.exports = router;
