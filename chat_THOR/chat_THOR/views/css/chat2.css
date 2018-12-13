@@ -1,0 +1,297 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+
+body {
+  background: #ECF0F1;
+  font-family: 'Roboto', Helvetica;
+  height: 100%;
+}
+
+.height-messages {
+  border-bottom: 3px solid #1D58A8;
+  height: -webkit-calc(100% - 10% - 45px);
+  height:    -moz-calc(100% - 10% - 45px);
+  height:         calc(100% - 10% - 45px);
+  min-height: -webkit-calc(100% - 10% - 45px);
+  min-height:    -moz-calc(100% - 10% - 45px);
+  min-height:         calc(100% - 10% - 45px);
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.height10 {
+  height: 10%;
+  max-height: 10%;
+  min-height: 10%;
+}
+
+.height100 {
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+.messages {
+  background: #FFF;
+}
+
+.message {
+  margin-top: 15px;
+}
+
+.message-body {
+  color: #111;
+  margin-top: 5px;
+}
+
+.message-date {
+  font-size: 0.875em;
+}
+
+.message-title {
+  color: #1D58A8;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.online-user {
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
+.online-users {
+  background: #FFF;
+  border-right: 2px solid #1D58A8;
+}
+
+.online-users-aside {
+  padding-left: 20px;
+}
+
+.online-userslist {
+  color: #2C3E50;
+}
+
+.user-image {
+  border: 2px solid #1ABC9C;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.tab-bar {
+  background: #1D58A8;
+  color: #FFF;
+}
+
+.titulo-formulario{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #1D58A8;
+    display: block;
+    color: #fff;    
+}
+
+.titulo-formulario h1{
+    margin: 0;
+    color:white;
+}
+
+#chat-enviar{
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 1s;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+#close {
+    color: #fff;
+    border-radius: 50%;
+    background-color: red;
+    padding: 0px 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    font-family: 'Nunito', sans-serif;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    max-width: 480px;
+    position: relative;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #fff;
+    border-radius: 50%;
+    background-color: red;
+    padding: 0px 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.chat {
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    color: #1D58A8;
+}
+
+.titulo-formulario {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.titulo-formulario h1,
+ul,
+p,
+h3 {
+    margin: 0;
+}
+
+.formulario-chat {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 30px 15px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.input-formulario {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    /*border: 1px solid #eee; */
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid #BEBEBE;
+}
+
+.titulo-formulario,
+.chat-enviar {
+    background-color: #1D58A8;
+    display: block;
+    color: #fff;
+}
+
+.chat-enviar {
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 1s;
+    margin: 0 auto;
+    font-weight: bold;
+    width: 30%;
+}
+
+.chat-enviar:hover {
+    background-color: #BEBEBE;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.lista-chat,
+.lista-sesion {
+    list-style: none;
+}
+
+.lista-sesion {
+    padding-left: 10%;
+}
+
+.parrafo {
+    text-align: center;
+    padding: 5% 0;
+}
+
+.cuerpo-chat {
+    background-color: #fff;
+}
+
+.contenido-chat {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.sesion {
+    width: 60%;
+    border: 1px solid #BEBEBE;
+    border-radius: 5px;
+}
+
+.subtitle {
+    background-color: #1D58A8;
+    text-align: center;
+}
+
+.usuario {
+    font-weight: bold;
+    padding-right: 8%;
+}

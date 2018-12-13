@@ -2,6 +2,8 @@ const express = require('express');
 const session = require('express-session');
 const User = require('../models/Usuario');
 const userRouter = express.Router();
+const path = require('path');
+const ejs = require('ejs');
 
 userRouter.get('/', async (req, res) => {
     // req.session.cuenta = req.session.cuenta ? req.session.cuenta + 1 : 1;
@@ -54,8 +56,11 @@ userRouter.post('/login', async (req, res) => {
         console.log(req.session.user_id)
         console.log(req.session)
 
-        //res.sendFile(path.join(__dirname + '../../../views/perfil.html'))
-        // res.end({status:"login ok"})
+        res.render(path.join(__dirname + '../../../views/perfil.ejs'), {
+            status: "login ok",
+            name: usuarioLog.name
+        })
+        res.end({ status: "login ok" })
     } else {
         console.log('login incorrecto')
 

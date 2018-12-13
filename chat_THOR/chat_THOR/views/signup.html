@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Rubik:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="css/chat2.css">
+    <title>Ingreso a chat</title>
+</head>
+<body>
+    <div class="titulo-formulario">
+        <h2 class="title">Chat de Thor mobile</h2>
+    </div>    
+    <form id="signup-form"  class="formulario-chat">
+        <h2 class="title">Registro Chat</h2>    
+        <input type="text"  id="username" name="username" placeholder="Ingresa tu usuario" class="input-formulario" required>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" class="input-formulario" required>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" class="input-formulario" required>
+ 
+        <button onclick="signup()" type="button" id="chat-enviar" class="chat-enviar" >Ingreso</button>
+        <span class="title" id="msg"></span>
+    </form>
+      
+        
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script type="text/javascript">
+          
+          function signup() {
+            $.ajax({
+              type: "POST",
+              url: '/signup',
+              data: $('#signup-form').serialize(),
+              success: function (data) {
+                $('#msg').empty();
+                if (data.error) {
+                 
+                  $('#msg').append(data.err.msg);
+                }
+                else {
+               
+                  $('#msg').append('Usuario registrado éxitosamente');
+                  $('#signup-form')[0].reset();
+                  window.location = '/';
+                }
+              },
+              dataType: 'json'
+            });
+          }
+          
+        </script>
+</body>
+</html>
